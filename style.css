@@ -88,6 +88,25 @@ Color prompts:
   --color-primary: var(--black);
 }
 
+.logo-inverted-theme {
+  --color-bg: var(--eggshell);
+  --color-text-main: var(--dark-grey-purple);
+  --color-primary: var(--black);
+}
+
+.logo-bright-theme {
+  --color-bg: var(--dark-purple-3);
+  --color-text-main: var(--light-grey-orange-2);
+  --color-primary: var(--grey-red-2);
+}
+
+.logo-bright-inverted-theme {
+  --color-bg: var(--light-grey-orange-2);
+  --color-text-main: var(--dark-purple-3);
+  --color-primary: var(--grey-2);
+}
+
+
 /* Basic page style resets */
 * {
   box-sizing: border-box;
