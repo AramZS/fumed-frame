@@ -41,6 +41,35 @@ Color prompts:
 
 /* Our default values set as CSS variables */
 :root {
+  /* basic colors from logo */
+  --light-black: #594C59;
+  --mid-black: #322440;
+	--3: #1E1526;
+	--4: #F2E1C2;
+	--5: #BFB0A3;
+  
+  /* adapted colors inspired by logo */
+  --6: #95CFFF;
+  --7: #A375D1;
+  
+  --8: #A4958C;
+  --9: #564754;
+  --10: #7E6E6F;
+  
+  --11: #A7978D;
+  --12: #D1C1AA;
+  --13: #8E817C;
+  --14: #4C3D4C;
+  --15: #7D706F;
+  
+  /*bright colorblind safe*/
+  --16: #322440;
+  --17: #1E1526;
+  --18: #F2E1C2;
+  --19: #D9C6B0;
+  --20: #8C7F7B;
+  
+  
   --color-bg: #69F7BE;
   --color-text-main: #000000;
   --color-primary: #FFFF00;
@@ -57,4 +86,28 @@ Color prompts:
 }
 [hidden] {
   display: none !important;
+}
+
+body {
+  font: var(--font-family); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: var(--font-family-header);
+}
+
+.bg-main {
+  background: var(--color-bg);
+}
+
+.text-color-main {
+  color: var(--color-text-main)
+}
+
+.fore-main {
+  background: var(--color-primary);
+}
+
+.fore-main-as-border {
+  border: 1 solid var(--color-primary);
 }
