@@ -86,24 +86,28 @@ Color prompts:
   --color-bg: var(--dark-grey-purple);
   --color-text-main: var(--eggshell);
   --color-primary: var(--black);
+  --color-text-secondary: var( --color-text-main);
 }
 
 .logo-inverted-theme {
   --color-bg: var(--eggshell);
   --color-text-main: var(--dark-grey-purple);
   --color-primary: var(--black);
+  --color-text-secondary: var(--light-grey);
 }
 
 .logo-bright-theme {
   --color-bg: var(--dark-purple-3);
   --color-text-main: var(--light-grey-orange-2);
   --color-primary: var(--grey-red-2);
+  --color-text-secondary: var(--black-purple);
 }
 
 .logo-bright-inverted-theme {
   --color-bg: var(--light-grey-orange-2);
   --color-text-main: var(--dark-purple-3);
   --color-primary: var(--grey-2);
+  --color-text-secondary: var(--color-text-main);
 }
 
 
@@ -138,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
 .fore-main-as-border {
   border: 1 solid var(--color-primary);
 }
+
 /* gen via https://grid.layoutit.com/ */
 .container {  
   display: grid;
@@ -159,7 +164,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .tower-right { grid-area: tower-right; }
 
-.footer-full { grid-area: footer-full; }
+.footer-full { 
+  grid-area: footer-full;
+  color: var(--color-text-secondary);
+}
 
 .tower-left-tip { grid-area: tower-left-tip; }
 
