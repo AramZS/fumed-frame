@@ -46,5 +46,5 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	);
 
-	setTheme(localStorage.getItem("theme") || "neon");
+	setTheme(localStorage.getItem("theme") || "logo");
 });
