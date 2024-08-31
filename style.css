@@ -186,11 +186,14 @@ h1, h2, h3, h4, h5, h6 {
 .footer-full { 
   grid-area: footer-full;
   color: var(--color-text-secondary);
+  color: white;
+  font-weight: bolder;
   background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/houses.png?v=1725147050740");
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-position: bottom;
-  padding: 20px;
+  padding: 40px;
+  padding-top: 50px;
 }
 
 .tower-left-tip { grid-area: tower-left-tip; }
