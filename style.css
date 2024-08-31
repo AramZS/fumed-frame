@@ -177,12 +177,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .tower-right { 
   grid-area: tower-right;
-    
+  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-right.png?v=1725147045973");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;      
 }
 
 .footer-full { 
   grid-area: footer-full;
   color: var(--color-text-secondary);
+  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/houses.png?v=1725147050740");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 20px;
 }
 
 .tower-left-tip { grid-area: tower-left-tip; }
