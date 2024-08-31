@@ -42,32 +42,32 @@ Color prompts:
 /* Our default values set as CSS variables */
 :root {
   /* basic colors from logo */
-  --light-black: #594C59;
+  --dark-grey-purple: #594C59;
   --mid-black: #322440;
-	--3: #1E1526;
-	--4: #F2E1C2;
-	--5: #BFB0A3;
+	--black: #1E1526;
+	--eggshell: #F2E1C2;
+	--light-grey: #BFB0A3;
   
   /* adapted colors inspired by logo */
-  --6: #95CFFF;
-  --7: #A375D1;
+  --light-blue: #95CFFF;
+  --dark-purple: #A375D1;
   
-  --8: #A4958C;
-  --9: #564754;
-  --10: #7E6E6F;
+  --grey-orange: #A4958C;
+  --grey-purple: #564754;
+  --grey-red: #7E6E6F;
   
-  --11: #A7978D;
-  --12: #D1C1AA;
-  --13: #8E817C;
-  --14: #4C3D4C;
-  --15: #7D706F;
+  --light-grey-orange: #A7978D;
+  --grey-eggshell: #D1C1AA;
+  --grey: #8E817C;
+  --dark-purple-2: #4C3D4C;
+  --grey-orange-2: #7D706F;
   
   /*bright colorblind safe*/
-  --16: #322440;
-  --17: #1E1526;
-  --18: #F2E1C2;
-  --19: #D9C6B0;
-  --20: #8C7F7B;
+  --dark-purple-3: #322440;
+  --black-purple: #1E1526;
+  --light-grey-orange-2: #F2E1C2;
+  --grey-2: #D9C6B0;
+  --grey-red-2: #8C7F7B;
   
   
   --color-bg: #69F7BE;
