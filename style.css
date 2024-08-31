@@ -147,6 +147,20 @@ h1, h2, h3, h4, h5, h6 {
   border: 1 solid var(--color-primary);
 }
 
+.hatched {
+  background-image: linear-gradient(
+      45deg, 
+      rgba(0,0,0,0.5) 25%, 
+      transparent 25%, 
+      transparent 50%, 
+      rgba(0,0,0,0.5) 50%, 
+      rgba(0,0,0,0.5) 75%, 
+      transparent 75%, 
+      transparent
+      );
+   background-size: 5px 5px;
+}
+
 /* gen via https://grid.layoutit.com/ */
 .container {  
   display: grid;
