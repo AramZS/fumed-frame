@@ -127,6 +127,10 @@ h1, h2, h3, h4, h5, h6 {
   font: var(--font-family-header);
 }
 
+.container {
+  height: 100vh;
+}
+
 .bg-main {
   background: var(--color-bg);
 }
@@ -156,13 +160,25 @@ h1, h2, h3, h4, h5, h6 {
     "footer-full footer-full footer-full";
 }
 
-.main-content { grid-area: main-content; }
+.main-content { 
+  grid-area: main-content; 
+  padding: 10px;
+}
 
 .main-header { grid-area: main-header; }
 
-.tower-left { grid-area: tower-left; }
+.tower-left { 
+  grid-area: tower-left;
+  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-left.png?v=1725145984861");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
 
-.tower-right { grid-area: tower-right; }
+.tower-right { 
+  grid-area: tower-right;
+    
+}
 
 .footer-full { 
   grid-area: footer-full;
