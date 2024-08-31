@@ -80,6 +80,14 @@ Color prompts:
   --font-family-header: "HK Grotesk";
 }
 
+/* themes */
+
+.logo-theme {
+  --color-bg: var(--dark-grey-purple);
+  --color-text-main: var(--eggshell);
+  --color-primary: var(--black);
+}
+
 /* Basic page style resets */
 * {
   box-sizing: border-box;
@@ -111,3 +119,29 @@ h1, h2, h3, h4, h5, h6 {
 .fore-main-as-border {
   border: 1 solid var(--color-primary);
 }
+/* gen via https://grid.layoutit.com/ */
+.container {  
+  display: grid;
+  grid-template-columns: 0.6fr 1.8fr 0.6fr;
+  grid-template-rows: 0.5fr 1.9fr 0.6fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "tower-left-tip main-header tower-right-tip"
+    "tower-left main-content tower-right"
+    "footer-full footer-full footer-full";
+}
+
+.main-content { grid-area: main-content; }
+
+.main-header { grid-area: main-header; }
+
+.tower-left { grid-area: tower-left; }
+
+.tower-right { grid-area: tower-right; }
+
+.footer-full { grid-area: footer-full; }
+
+.tower-left-tip { grid-area: tower-left-tip; }
+
+.tower-right-tip { grid-area: tower-right-tip; }
