@@ -133,7 +133,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-main {
   background: var(--color-bg);
+
 }
+
+.bg-main::after {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(10px at center, black, white);
+    background-size: 20px 20px;
+    mix-blend-mode: screen;
+}
+
 
 .text-color-main {
   color: var(--color-text-main)
@@ -216,17 +226,16 @@ h1, h2, h3, h4, h5, h6 {
 
 
 nav, nav h1 {
-    font-size: 16px
-    display: inline-block
+    font-size: 16px;
+    display: inline-block;
 }
 
 nav {
-    border-bottom: 3px solid black;
     padding: 0 10px;
     width: 100%;
     position: fixed;
     background-color: transparent;
-    height: 40px;
+    height: 80px;
     z-index: 100;
     top: 5px;
     left: 0;
@@ -243,7 +252,7 @@ nav:before {
         left: 0px;
         z-index: -1;
         /* From: https://codepen.io/AgnusDei/pen/NWPbOxL*/
-        box-shadow: 2px 3px 20px var(--color-bg), 0 0 12px var(--color-primary) inset;
+        /*box-shadow: 2px 3px 20px var(--color-bg), 0 0 12px var(--color-primary) inset;*/
         background: var(--color-bg);
         /* v2.1 : borders effect with SVG : try to play with scale to change them */
         filter: url(#wavy2);
