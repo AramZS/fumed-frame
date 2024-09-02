@@ -144,6 +144,12 @@ h1, h2, h3, h4, h5, h6 {
     mix-blend-mode: screen;
 }
 
+.title-style {
+    font-family: "Garnet Capitals", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 .text-color-main {
   color: var(--color-text-main)
@@ -226,7 +232,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 nav, nav h1 {
-    font-size: 16px;
+    font-size: 18px;
     display: inline-block;
 }
 
@@ -265,7 +271,7 @@ nav ul {
 }
 nav a, nav a:link, nav a:visited, nav h1 a, nav h1 a:link, nav h1 a:visited {
         font-weight: bolder;
-        color: var(--rule-red);
+        color: var(--dark-grey-purple);
         text-decoration: underline var(--dark-grey-purple);
 }
 nav a:hover, h1 a:hover {
