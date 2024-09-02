@@ -80,6 +80,16 @@ Color prompts:
   --font-family-header: "HK Grotesk";
 }
 
+
+@font-face {
+    font-family: 'Garnet Capitals';
+    src: url('https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff2?v=1725315130751') format('woff2'),
+        url('https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff?v=1725315130369') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* themes */
 
 .logo-theme {
@@ -148,6 +158,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Garnet Capitals", sans-serif;
     font-weight: normal;
     font-style: normal;
+    font-size: 28px;
 }
 
 
@@ -232,8 +243,15 @@ h1, h2, h3, h4, h5, h6 {
 
 
 nav, nav h1 {
-    font-size: 18px;
     display: inline-block;
+    font-family: "Garnet Capitals", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+nav h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 nav {
@@ -245,9 +263,9 @@ nav {
     z-index: 100;
     top: 5px;
     left: 0;
-    font-family: "Cardo",serif;
     font-variant-caps: small-caps;
     text-align: center;
+    font-size: 12px;
 }
 nav:before {
         content: "";
