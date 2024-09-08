@@ -210,18 +210,33 @@ h1, h2, h3, h4, h5, h6 {
 
 .tower-left { 
   grid-area: tower-left;
-  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-left.png?v=1725145984861");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: bottom;
+
 }
 
 .tower-right { 
   grid-area: tower-right;
-  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-right.png?v=1725147045973");
+
+}
+
+.tower-inner {
+  position: sticky;
+  top: 20vh;
+  width: 100%;
+  height: 80vh;
+}
+
+.tower-right-inner {
+    background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-right.png?v=1725147045973");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;      
+}
+
+.tower-left-inner {
+    background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-left.png?v=1725145984861");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 .footer-full { 
