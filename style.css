@@ -207,8 +207,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 80px;
 }
 
-.main-body {
-  background: var(--halftone);
+.halftone-bg {
+    background: var(--halftone);
+    background-origin: border-box;
+    background-blend-mode: normal;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 160%;
 }
 
 .main-header { grid-area: main-header; }
@@ -231,7 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tower-right-inner {
-    background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-right.png?v=1725147045973");
+  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-right.png?v=1725147045973");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;      
@@ -301,7 +306,7 @@ nav:before {
         /* v2.1 : borders effect with SVG : try to play with scale to change them */
         filter: url(#wavy2);
         /* v2.2 : Noise added for a vellum paper effect */
-        background-image: var(--vellum)
+        background-image: var(--vellum);
 }
 nav ul {
         background: transparent;
