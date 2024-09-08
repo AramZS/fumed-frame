@@ -289,8 +289,8 @@ nav ul {
 }
 nav a, nav a:link, nav a:visited, nav h1 a, nav h1 a:link, nav h1 a:visited {
         font-weight: bolder;
-        color: var(--dark-grey-purple);
-        text-decoration: underline var(--dark-grey-purple);
+        color: var(--color-text-main);
+        text-decoration: underline var(--color-text-main);
 }
 nav a:hover, h1 a:hover {
         text-decoration: underline var(--dark-grey-purple) wavy;

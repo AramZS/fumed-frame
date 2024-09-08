@@ -5,7 +5,7 @@
       This is an HTML comment
       You can write text in a comment and the content won't be visible in the page
     -->
-
+<script src="https://unpkg.com/scrollama"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="preload" href="https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff2?v=1725315130751" as="font" type="font/woff2" crossorigin>
@@ -47,7 +47,25 @@
         <div class="main-content">
           <main>
             <div class="main-body">
+              <br />
+              <div class="theme-selector">
+                Themes:
+                <button class="theme-selector-btn" data-theme="logo">Logo</button>
+                <button class="theme-selector-btn" data-theme="logo-inverted">
+                  Logo Inverted
+                </button>
+                <button class="theme-selector-btn" data-theme="logo-bright">
+                  Logo Bright
+                </button>
+                <button
+                  class="theme-selector-btn"
+                  data-theme="logo-bright-inverted"
+                >
+                  Logo Bright Inverted
+                </button>
+              </div>
               <h2>Using this project</h2>
+              
               <p>
                 This is the Glitch <strong>Hello Website</strong> project. You
                 can use it to build your own site. Check out the code in the
@@ -70,22 +88,7 @@
           <!-- The footer holds our remix button — you can keep or delete it ✂ -->
           <footer class="footer">
             <div>Footer Text</div>
-            <div class="theme-selector">
-              Themes:
-              <button class="theme-selector-btn" data-theme="logo">Logo</button>
-              <button class="theme-selector-btn" data-theme="logo-inverted">
-                Logo Inverted
-              </button>
-              <button class="theme-selector-btn" data-theme="logo-bright">
-                Logo Bright
-              </button>
-              <button
-                class="theme-selector-btn"
-                data-theme="logo-bright-inverted"
-              >
-                Logo Bright Inverted
-              </button>
-            </div>
+
             <div class="links"></div>
           </footer>
         </div>
