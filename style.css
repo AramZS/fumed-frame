@@ -204,6 +204,11 @@ h1, h2, h3, h4, h5, h6 {
 .main-content { 
   grid-area: main-content; 
   padding: 10px;
+  margin-top: 80px;
+}
+
+.main-body {
+  background: var(--halftone);
 }
 
 .main-header { grid-area: main-header; }
