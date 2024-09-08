@@ -169,11 +169,16 @@
         "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_25.jpg?v=1725829007195",
         "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_06.jpg?v=1725829004369",
         "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_02.jpg?v=1725829002975",
-        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_09.jpg?v=1725829001495"
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_09.jpg?v=1725829001495",
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_13.jpg?v=1725831584421"
       ];  
     
     imgSet.forEach((imgUrl) => {
-     document.head.append(`<link rel="prefetch" as="image" href="${imgUrl}">`) 
+      var linkEl = document.createElement('link');
+      linkEl.rel = "preload";
+      linkEl.as = "image";
+      linkEl.href = imgUrl;
+     document.head.append(linkEl) 
     })
     
 figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;    
@@ -211,7 +216,7 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
 
 			// update graphic based on step
       console.log('Scroll Handle: ', element, figure, figureElInner)
-			figureElInner.innerHTML = `<img src="${imgSet[response.index]}" />`;
+			figureElInner.innerHTML = `<img src="${imgSet[response.index+1]}" />`;
 		}
 
 
