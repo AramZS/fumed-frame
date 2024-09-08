@@ -92,7 +92,7 @@
               </section>
 
               <section id="scrolly">
-                <figure>
+                <figure id="scrolly-figure">
                   <div>0</div>
                 </figure>
 
@@ -154,7 +154,7 @@
     </svg>
     
 	<script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
-	<script src="../scrollama.min.js"></script>
+
 	<script>
 		// using d3 for convenience
 		var main = d3.select("main");
@@ -162,6 +162,8 @@
 		var figure = scrolly.select("figure");
 		var article = scrolly.select("article");
 		var step = article.selectAll(".step");
+    var figureEl = document.querySelector("scrolly-figure")
+    var figureElInner = document.querySelector("scrolly-figure div")
 
 		// initialize the scrollama
 		var scroller = scrollama();
@@ -192,7 +194,7 @@
         "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_09.jpg?v=1725829001495"
       ];
       console.log(response);
-			// response = { element, direction, index }
+			var { element, direction, index } = response;
 
 			// add color to current step only
 			step.classed("is-active", function (d, i) {
@@ -200,7 +202,8 @@
 			});
 
 			// update graphic based on step
-			figure.select("p").text(response.index + 1);
+      console.log('Scroll Handle: ', element, figure, figure.firstChild)
+			figure.firstChild.innerHTML(`<img src="${imgSet[response.index]}" />`);
 		}
 
 
