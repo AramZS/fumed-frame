@@ -162,9 +162,22 @@
 		var figure = scrolly.select("figure");
 		var article = scrolly.select("article");
 		var step = article.selectAll(".step");
-    var figureEl = document.querySelector("scrolly-figure")
-    var figureElInner = document.querySelector("scrolly-figure div")
-
+    var figureEl = document.querySelector("#scrolly-figure")
+    var figureElInner = document.querySelector("#scrolly-figure div");
+    
+			var imgSet = [
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_25.jpg?v=1725829007195",
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_06.jpg?v=1725829004369",
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_02.jpg?v=1725829002975",
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_09.jpg?v=1725829001495"
+      ];  
+    
+    imgSet.forEach((imgUrl) => {
+     document.head.append(`<link rel="prefetch" as="image" href="${imgUrl}">`) 
+    })
+    
+figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;    
+    
 		// initialize the scrollama
 		var scroller = scrollama();
 
@@ -187,12 +200,7 @@
 
 		// scrollama event handlers
 		function handleStepEnter(response) {
-			var imgSet = [
-        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_25.jpg?v=1725829007195",
-        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_06.jpg?v=1725829004369",
-        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_02.jpg?v=1725829002975",
-        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_09.jpg?v=1725829001495"
-      ];
+
       console.log(response);
 			var { element, direction, index } = response;
 
@@ -202,8 +210,8 @@
 			});
 
 			// update graphic based on step
-      console.log('Scroll Handle: ', element, figure, figure.firstChild)
-			figure.firstChild.innerHTML(`<img src="${imgSet[response.index]}" />`);
+      console.log('Scroll Handle: ', element, figure, figureElInner)
+			figureElInner.innerHTML = `<img src="${imgSet[response.index]}" />`;
 		}
 
 
