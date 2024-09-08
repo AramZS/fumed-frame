@@ -371,6 +371,10 @@ nav li:not(:last-of-type)::after {
 			color: #ffffff;
 		}
 
+    figure img {
+      max-width: 100%;
+    }
+
 		.step {
 			margin: 0 auto 2rem auto;
 			color: #ffffff;
@@ -381,12 +385,12 @@ nav li:not(:last-of-type)::after {
 			margin-bottom: 0;
 		}
 
-		.step.is-active p {
+		.step.is-active p:first-of-type {
 			background-color: goldenrod;
 			color: #3b3b3b;
 		}
 
-		.step p {
+		.step p:first-of-type {
 			text-align: center;
 			padding: 1rem;
 			font-size: 1.5rem;
