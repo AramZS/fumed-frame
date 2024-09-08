@@ -7,7 +7,6 @@ you're new to CSS they may seem a little complicated, but you can scroll down
 to this section's matching END comment to see page-specific styles.
 ******************************************************************************/
 
-
 /* 
   The style rules specify elements by type and by attributes such as class and ID
   Each section indicates an element or elements, then lists the style properties to apply
@@ -42,37 +41,36 @@ Color prompts:
 /* Our default values set as CSS variables */
 :root {
   /* basic colors from logo */
-  --dark-grey-purple: #594C59;
+  --dark-grey-purple: #594c59;
   --mid-black: #322440;
-	--black: #1E1526;
-	--eggshell: #F2E1C2;
-	--light-grey: #BFB0A3;
-  
+  --black: #1e1526;
+  --eggshell: #f2e1c2;
+  --light-grey: #bfb0a3;
+
   /* adapted colors inspired by logo */
-  --light-blue: #95CFFF;
-  --dark-purple: #A375D1;
-  
-  --grey-orange: #A4958C;
+  --light-blue: #95cfff;
+  --dark-purple: #a375d1;
+
+  --grey-orange: #a4958c;
   --grey-purple: #564754;
-  --grey-red: #7E6E6F;
-  
-  --light-grey-orange: #A7978D;
-  --grey-eggshell: #D1C1AA;
-  --grey: #8E817C;
-  --dark-purple-2: #4C3D4C;
-  --grey-orange-2: #7D706F;
-  
+  --grey-red: #7e6e6f;
+
+  --light-grey-orange: #a7978d;
+  --grey-eggshell: #d1c1aa;
+  --grey: #8e817c;
+  --dark-purple-2: #4c3d4c;
+  --grey-orange-2: #7d706f;
+
   /*bright colorblind safe*/
   --dark-purple-3: #322440;
-  --black-purple: #1E1526;
-  --light-grey-orange-2: #F2E1C2;
-  --grey-2: #D9C6B0;
-  --grey-red-2: #8C7F7B;
-  
-  
-  --color-bg: #69F7BE;
+  --black-purple: #1e1526;
+  --light-grey-orange-2: #f2e1c2;
+  --grey-2: #d9c6b0;
+  --grey-red-2: #8c7f7b;
+
+  --color-bg: #69f7be;
   --color-text-main: #000000;
-  --color-primary: #FFFF00;
+  --color-primary: #ffff00;
   --wrapper-height: 87vh;
   --image-max-width: 300px;
   --image-margin: 3rem;
@@ -80,14 +78,15 @@ Color prompts:
   --font-family-header: "HK Grotesk";
 }
 
-
 @font-face {
-    font-family: 'Garnet Capitals';
-    src: url('https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff2?v=1725315130751') format('woff2'),
-        url('https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff?v=1725315130369') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Garnet Capitals";
+  src: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff2?v=1725315130751")
+      format("woff2"),
+    url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/GarnetCapitals-Regular.woff?v=1725315130369")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* themes */
@@ -96,7 +95,7 @@ Color prompts:
   --color-bg: var(--dark-grey-purple);
   --color-text-main: var(--eggshell);
   --color-primary: var(--black);
-  --color-text-secondary: var( --color-text-main);
+  --color-text-secondary: var(--color-text-main);
 }
 
 .logo-inverted-theme {
@@ -120,7 +119,6 @@ Color prompts:
   --color-text-secondary: var(--color-text-main);
 }
 
-
 /* Basic page style resets */
 * {
   box-sizing: border-box;
@@ -130,10 +128,15 @@ Color prompts:
 }
 
 body {
-  font: var(--font-family); 
+  font: var(--font-family);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font: var(--font-family-header);
 }
 
@@ -143,27 +146,25 @@ h1, h2, h3, h4, h5, h6 {
 
 .bg-main {
   background: var(--color-bg);
-
 }
 
 .bg-main::after {
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(10px at center, black, white);
-    background-size: 20px 20px;
-    mix-blend-mode: screen;
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(10px at center, black, white);
+  background-size: 20px 20px;
+  mix-blend-mode: screen;
 }
 
 .title-style {
-    font-family: "Garnet Capitals", sans-serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 28px;
+  font-family: "Garnet Capitals", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 28px;
 }
 
-
 .text-color-main {
-  color: var(--color-text-main)
+  color: var(--color-text-main);
 }
 
 .fore-main {
@@ -176,20 +177,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .hatched {
   background-image: linear-gradient(
-      45deg, 
-      rgba(0,0,0,0.5) 25%, 
-      transparent 25%, 
-      transparent 50%, 
-      rgba(0,0,0,0.5) 50%, 
-      rgba(0,0,0,0.5) 75%, 
-      transparent 75%, 
-      transparent
-      );
-   background-size: 5px 5px;
+    45deg,
+    rgba(0, 0, 0, 0.5) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.5) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 5px 5px;
 }
 
 /* gen via https://grid.layoutit.com/ */
-.container {  
+.container {
   display: grid;
   grid-template-columns: 0.6fr 1.8fr 0.6fr;
   grid-template-rows: 0.5fr 1.9fr 0.6fr;
@@ -201,30 +202,30 @@ h1, h2, h3, h4, h5, h6 {
     "footer-full footer-full footer-full";
 }
 
-.main-content { 
-  grid-area: main-content; 
+.main-content {
+  grid-area: main-content;
   padding: 10px;
   margin-top: 80px;
 }
 
 .halftone-bg {
-    background: var(--halftone);
-    background-blend-mode: normal;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: 70vw;
+  background: var(--halftone);
+  background-blend-mode: normal;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 70vw;
 }
 
-.main-header { grid-area: main-header; }
+.main-header {
+  grid-area: main-header;
+}
 
-.tower-left { 
+.tower-left {
   grid-area: tower-left;
-
 }
 
-.tower-right { 
+.tower-right {
   grid-area: tower-right;
-
 }
 
 .tower-inner {
@@ -238,17 +239,17 @@ h1, h2, h3, h4, h5, h6 {
   background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-right.png?v=1725147045973");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: bottom;      
+  background-position: bottom;
 }
 
 .tower-left-inner {
-    background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-left.png?v=1725145984861");
+  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-left.png?v=1725145984861");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
-.footer-full { 
+.footer-full {
   grid-area: footer-full;
   color: var(--color-text-secondary);
   color: white;
@@ -261,16 +262,20 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 50px;
 }
 
-.tower-left-tip { grid-area: tower-left-tip; }
+.tower-left-tip {
+  grid-area: tower-left-tip;
+}
 
-.tower-right-tip { grid-area: tower-right-tip; }
+.tower-right-tip {
+  grid-area: tower-right-tip;
+}
 
-
-nav, nav h1 {
-    display: inline-block;
-    font-family: "Garnet Capitals", sans-serif;
-    font-weight: normal;
-    font-style: normal;
+nav,
+nav h1 {
+  display: inline-block;
+  font-family: "Garnet Capitals", sans-serif;
+  font-weight: normal;
+  font-style: normal;
 }
 
 nav h1 {
@@ -279,120 +284,129 @@ nav h1 {
 }
 
 nav {
-    padding: 0 10px;
-    width: 100%;
-    position: fixed;
-    background-color: transparent;
-    height: 80px;
-    z-index: 100;
-    top: 5px;
-    left: 0;
-    font-variant-caps: small-caps;
-    text-align: center;
-    font-size: 12px;
+  padding: 0 10px;
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  height: 80px;
+  z-index: 100;
+  top: 5px;
+  left: 0;
+  font-variant-caps: small-caps;
+  text-align: center;
+  font-size: 12px;
 }
 nav:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0px;
-        left: 0px;
-        z-index: -1;
-        /* From: https://codepen.io/AgnusDei/pen/NWPbOxL*/
-        /*box-shadow: 2px 3px 20px var(--color-bg), 0 0 12px var(--color-primary) inset;*/
-        background: var(--color-bg);
-        /* v2.1 : borders effect with SVG : try to play with scale to change them */
-        filter: url(#wavy2);
-        /* v2.2 : Noise added for a vellum paper effect */
-        background-image: var(--vellum);
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  /* From: https://codepen.io/AgnusDei/pen/NWPbOxL*/
+  /*box-shadow: 2px 3px 20px var(--color-bg), 0 0 12px var(--color-primary) inset;*/
+  background: var(--color-bg);
+  /* v2.1 : borders effect with SVG : try to play with scale to change them */
+  filter: url(#wavy2);
+  /* v2.2 : Noise added for a vellum paper effect */
+  background-image: var(--vellum);
 }
 nav ul {
-        background: transparent;
-        margin-top: 12px;
+  background: transparent;
+  margin-top: 12px;
 }
-nav a, nav a:link, nav a:visited, nav h1 a, nav h1 a:link, nav h1 a:visited {
-        font-weight: bolder;
-        color: var(--color-text-main);
-        text-decoration: underline var(--color-text-main);
+nav a,
+nav a:link,
+nav a:visited,
+nav h1 a,
+nav h1 a:link,
+nav h1 a:visited {
+  font-weight: bolder;
+  color: var(--color-text-main);
+  text-decoration: underline var(--color-text-main);
 }
-nav a:hover, h1 a:hover {
-        text-decoration: underline var(--dark-grey-purple) wavy;
+nav a:hover,
+h1 a:hover {
+  text-decoration: underline var(--dark-grey-purple) wavy;
 }
 nav li {
-        display: inline-block;
+  display: inline-block;
 }
 
-        
 nav li:not(:last-of-type)::after {
-            content: "|";
-            padding: 0 9px;
-            display: inline-block;
+  content: "|";
+  padding: 0 9px;
+  display: inline-block;
 }
 
 /* scrollytelling setup */
-		#scrolly {
-			position: relative;
-			background-color: #f3f3f3;
-			padding: 1rem;
-		}
+#scrolly {
+  position: relative;
+  background-color: #f3f3f3;
+  padding: 1rem;
+}
 
-		article {
-			position: relative;
-			padding: 0;
-			max-width: 20rem;
-			margin: 0 auto;
-		}
+article {
+  position: relative;
+  padding: 0;
+  max-width: 20rem;
+  margin: 0 auto;
+}
 
-		figure {
-			position: -webkit-sticky;
-			position: sticky;
-			left: 0;
-			width: 100%;
-			margin: 0;
-			-webkit-transform: translate3d(0, 0, 0);
-			-moz-transform: translate3d(0, 0, 0);
-			transform: translate3d(0, 0, 0);
-			background-color: #8a8a8a;
-			z-index: 0;
-		}
+figure {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  background-color: #8a8a8a;
+  z-index: 0;
+}
 
-		figure p {
-			text-align: center;
-			padding: 1rem;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			-moz-transform: translate(-50%, -50%);
-			-webkit-transform: translate(-50%, -50%);
-			transform: translate(-50%, -50%);
-			font-size: 8rem;
-			font-weight: 900;
-			color: #ffffff;
-		}
+figure p {
+  text-align: center;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-size: 8rem;
+  font-weight: 900;
+  color: #ffffff;
+}
 
-    figure img {
-      max-width: 100%;
-    }
+figure img {
+  max-width: 100%;
+}
 
-		.step {
-			margin: 0 auto 2rem auto;
-			color: #ffffff;
-			background-color: rgba(0, 0, 0, 0.1);
-		}
+.step {
+  margin: 0 auto 2rem auto;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
-		.step:last-child {
-			margin-bottom: 0;
-		}
+.step:last-child {
+  margin-bottom: 0;
+}
 
-		.step.is-active p:first-of-type {
-			background-color: goldenrod;
-			color: #3b3b3b;
-		}
+.step.is-active p:first-of-type {
+  background-color: goldenrod;
+  color: #3b3b3b;
+}
 
-		.step p:first-of-type {
-			text-align: center;
-			padding: 1rem;
-			font-size: 1.5rem;
-			background-color: #3b3b3b;
-		}
+.step p:first-of-type {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background-color: #3b3b3b;
+}
+
+.step p:not(:first-of-type) {
+  margin: 10px;
+}

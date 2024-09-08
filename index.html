@@ -93,7 +93,7 @@
 
               <section id="scrolly">
                 <figure>
-                  <p>0</p>
+                  <div>0</div>
                 </figure>
 
                 <article>
@@ -185,7 +185,13 @@
 
 		// scrollama event handlers
 		function handleStepEnter(response) {
-			console.log(response);
+			var imgSet = [
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_25.jpg?v=1725829007195",
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_06.jpg?v=1725829004369",
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_02.jpg?v=1725829002975",
+        "https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Channelview_09.jpg?v=1725829001495"
+      ];
+      console.log(response);
 			// response = { element, direction, index }
 
 			// add color to current step only
