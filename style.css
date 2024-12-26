@@ -411,6 +411,10 @@ figure img {
   margin: 10px;
 }
 
+.main-header {
+  background: #2B1D33;
+}
+
 .header-image img {
   width: 100%;
 }
@@ -425,5 +429,11 @@ figure img {
 
 header h1 {
   font-family: "Garnet Capitals", sans-serif;
-  font-weight: bold;
+  font-weight: bold;  
+  text-align: center;
+  background: #2B1D33;
+  color: var(--eggshell);
+  /* font-size: 130px; */
+  font-size: 17vh;
+  margin: 0;
 }
