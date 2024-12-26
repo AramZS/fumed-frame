@@ -415,6 +415,10 @@ figure img {
   width: 100%;
 }
 
+.header-image img.smokestacks {
+  width: 100%;
+}
+
 .tower-left-tip, .tower-right-tip {
     background: #2B1D33;
 }
