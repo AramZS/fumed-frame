@@ -410,3 +410,7 @@ figure img {
 .step p:not(:first-of-type) {
   margin: 10px;
 }
+
+.header-image img {
+  width: 100%;
+}
