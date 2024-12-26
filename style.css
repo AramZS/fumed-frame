@@ -422,3 +422,8 @@ figure img {
 .tower-left-tip, .tower-right-tip {
     background: #2B1D33;
 }
+
+header h1 {
+  font-family: "Garnet Capitals", sans-serif;
+  font-weight: bold;
+}
