@@ -161,8 +161,27 @@
 	<script>
     
     var getStoryData = function(){
-      
+      const fetchData = new Promise((resolve, reject) => {
+
+      fetch('https://publichealthwatch.org/wp-json/wp/v2/tags')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+          }
+          return response.json();
+        })
+        .then(data => {
+          resolve(data);
+        })
+        .catch(error => {
+          console.error('There has been a problem with your fetch operation:', error);
+        });
+      })
+      return fetchData;
     }
+    
+    let storyData = getStoryData();
+    storyData.then(result => console.log(result))
     
 		// using d3 for convenience
 		var main = d3.select("main");
