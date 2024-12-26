@@ -414,3 +414,7 @@ figure img {
 .header-image img {
   width: 100%;
 }
+
+.tower-left-tip, .tower-right-tip {
+    background: #2B1D33;
+}
