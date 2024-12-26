@@ -46,6 +46,7 @@ Color prompts:
   --black: #1e1526;
   --eggshell: #f2e1c2;
   --light-grey: #bfb0a3;
+  --main-purple: #2B1D33;
 
   /* adapted colors inspired by logo */
   --light-blue: #95cfff;
@@ -412,26 +413,33 @@ figure img {
 }
 
 .main-header {
-  background: #2B1D33;
+  background: var(--main-purple);
 }
 
 .header-image img {
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .header-image img.smokestacks {
-  width: 100%;
+    left: 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    position: sticky;
 }
 
 .tower-left-tip, .tower-right-tip {
-    background: #2B1D33;
+    background: var(--main-purple);
 }
 
 header h1 {
   font-family: "Garnet Capitals", sans-serif;
   font-weight: bold;  
   text-align: center;
-  background: #2B1D33;
+  background: var(--main-purple);
   color: var(--eggshell);
   /* font-size: 130px; */
   font-size: 17vh;
