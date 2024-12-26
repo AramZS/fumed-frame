@@ -412,8 +412,32 @@ figure img {
   margin: 10px;
 }
 
-.main-header {
+html {
   background: var(--main-purple);
+}
+
+.main-header {
+  background-color: var(--main-purple);
+}
+
+.main-header header nav {
+    position: absolute;
+    bottom: 0;
+    top: 82%;
+    padding-top: 16px;
+    height: 40px;
+    left: 0;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: 100vw;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+    position: sticky;
+}
+
+.main-content, .tower-left, .tower-right {
+  background-color: var(--color-bg);
 }
 
 .header-image img {
