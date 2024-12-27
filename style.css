@@ -425,7 +425,7 @@ html {
     bottom: 0;
     top: 82%;
     padding-top: 16px;
-    height: 40px;
+    height: 130px;
     left: 0;
     margin-left: -50vw;
     margin-right: -50vw;
@@ -434,6 +434,10 @@ html {
     right: 50%;
     width: 100vw;
     position: sticky;
+}
+
+.main-header header nav ul li {
+  font-size: 18px;
 }
 
 .main-content, .tower-left, .tower-right {
@@ -475,8 +479,15 @@ header h1 {
 }
 
 .tagline {
-  font-size: 18px;
+  font-size: 22px;
+  margin: 4px 0;
 }
 .sponsor-line {
-  font-size: 11px;
+  font-size: 13px;
+  margin: 10px 0;
+}
+nav li:not(:last-of-type)::after {
+  content: " ";
+  padding: 0 9px;
+  display: inline-block;
 }
