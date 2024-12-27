@@ -498,3 +498,7 @@ nav li:not(:last-of-type)::after {
   background: transparent;
   border: 0;
 }
+
+.nav-expander-button svg {
+  width: 30px
+}
