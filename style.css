@@ -469,3 +469,14 @@ header h1 {
   font-size: 17vh;
   margin: 0;
 }
+
+.tower-right-inner, .tower-left-inner {
+  background-image: none;
+}
+
+.tagline {
+  font-size: 18px;
+}
+.sponsor-line {
+  font-size: 11px;
+}
