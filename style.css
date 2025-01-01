@@ -81,7 +81,7 @@ Color prompts:
   --padding-inline: 1rem;
   --paragraph-max-width: 864px;
   --content-max-width: 1400px;
-  --main-content-width: calc(--paragraph-max-width + (--content-max-width - --paragraph-max-width) / 2))
+  --main-content-width: calc(--paragraph-max-width + ((--content-max-width - --paragraph-max-width) / 2))
 }
 
 @font-face {
@@ -433,10 +433,19 @@ figure img {
 
 html {
   background: var(--main-purple);
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
 }
 
 .main-header {
   background-color: var(--main-purple);
+}
+
+.main-header header {
+  margin-bottom: -10px;
 }
 
 .main-header header nav {
