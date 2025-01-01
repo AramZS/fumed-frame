@@ -519,7 +519,7 @@ header h1 {
 
 .tagline {
   /*font-size: clamp(1.25rem, 3.5vw, 15rem);*/
-  font-size: clamp(1.25rem, 3.5vw, 3rem);
+  font-size: clamp(1.25rem, 3.7vw, 3rem);
   margin: 4px 0;
 }
 .sponsor-line {
