@@ -315,7 +315,8 @@ nav:before {
 }
 nav ul {
   background: transparent;
-  margin-top: 12px;
+  margin: 12px 0;
+  padding: 0;
 }
 nav a,
 nav a:link,
@@ -340,6 +341,17 @@ nav li:not(:last-of-type)::after {
   padding: 0 9px;
   display: inline-block;
 }
+
+nav {
+  text-align: center;
+}
+
+nav li:not(:last-of-type)::after {
+  content: " ";
+  padding: 0 9px;
+  display: inline-block;
+}
+
 
 /* scrollytelling setup */
 #scrolly {
@@ -487,17 +499,6 @@ header h1 {
   font-size: 13px;
   margin: 10px 0;
 }
-
-nav {
-  text-align: center;
-}
-
-nav li:not(:last-of-type)::after {
-  content: " ";
-  padding: 0 9px;
-  display: inline-block;
-}
-
 .nav-expander-button {
   width: 20px;
   position: fixed;
