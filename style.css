@@ -534,5 +534,5 @@ header h1 {
 }
 
 .nav-expander-button svg {
-  width: 30px
+  width: clamp(30px, 8vw, 50px)
 }
