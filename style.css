@@ -468,6 +468,8 @@ body {
 
 .main-header header nav ul li {
   font-size: clamp(18px, 3.5vw, 4.5rem);
+  text-decoration: underline;
+  text-decoration-color: darkblue;
 }
 
 @media (max-width: 750px) {
@@ -525,7 +527,7 @@ header h1 {
   margin: 10px 0;
 }
 .nav-expander-button {
-  width: 20px;
+  width: fit-content;
   position: fixed;
   background: transparent;
   border: 0;
