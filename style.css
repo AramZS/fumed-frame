@@ -455,7 +455,7 @@ body {
     bottom: 0;
     top: 82%;
     padding-top: 16px;
-    height: clamp(130px, 14vw, 150px);
+    height: clamp(130px, 14vw, 165px);
     left: 0;
     margin-left: -50vw;
     margin-right: -50vw;
