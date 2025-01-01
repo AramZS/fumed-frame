@@ -532,6 +532,8 @@ header h1 {
   position: fixed;
   background: transparent;
   border: 0;
+  background: var(--color-text-main);
+  border-radius: 10px;  
 }
 
 .nav-expander-button svg {
