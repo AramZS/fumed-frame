@@ -286,12 +286,12 @@ nav h1 {
   font-style: normal;
 }
 
-nav h1 {
+.main-header nav h1 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-nav {
+.main-header nav {
   padding: 0 10px;
   width: 100%;
   position: fixed;
@@ -305,7 +305,7 @@ nav {
   font-size: 12px;
   height: 15vw;
 }
-nav:before {
+.main-header nav:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -321,7 +321,7 @@ nav:before {
   /* v2.2 : Noise added for a vellum paper effect */
   background-image: var(--vellum);
 }
-nav ul {
+.main-header nav ul {
   background: transparent;
   margin: 12px 0;
   padding: 0;
@@ -534,6 +534,7 @@ header h1 {
   border: 0;
   background: var(--color-text-main);
   border-radius: 10px;  
+  z-index: 100;
 }
 
 .nav-expander-button svg {
@@ -542,4 +543,5 @@ header h1 {
 
 #menu {
   display: none;
+  background-color: var(--color-text-main);  
 }
