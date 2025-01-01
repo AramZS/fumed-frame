@@ -77,6 +77,11 @@ Color prompts:
   --image-margin: 3rem;
   --font-family: "HK Grotesk";
   --font-family-header: "HK Grotesk";
+  
+  --padding-inline: 1rem;
+  --paragraph-max-width: 864px;
+  --content-max-width: 1400px;
+  --main-content-width: calc(--paragraph-max-width + (--content-max-width - --paragraph-max-width) / 2))
 }
 
 @font-face {
@@ -207,6 +212,7 @@ h6 {
   grid-area: main-content;
   padding: 10px;
   margin-top: 80px;
+  max-width: var(--content-size)
 }
 
 .halftone-bg {
@@ -296,6 +302,7 @@ nav {
   font-variant-caps: small-caps;
   text-align: center;
   font-size: 12px;
+  height: 15vw;
 }
 nav:before {
   content: "";
