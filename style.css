@@ -551,6 +551,23 @@ header h1 {
   position: fixed;
   top: 0;
   right: 100px;
-  z-index: 100;
+  z-index: 99;
   color: var(--light-grey-orange-2);
+  width: 100vw;
+}
+
+#menu nav {
+  /* position: relative; */
+  /* float: right; */
+  /* margin-right: 10vw; */
+}
+
+@media (max-width: 750px) {
+  #menu.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 100px;
+    width: 100vw;
+  }
 }
