@@ -480,13 +480,18 @@ header h1 {
 }
 
 .tagline {
-  font-size: 22px;
+  font-size: clamp(1.25rem, 3.5vw, 15rem);
   margin: 4px 0;
 }
 .sponsor-line {
   font-size: 13px;
   margin: 10px 0;
 }
+
+nav {
+  text-align: center;
+}
+
 nav li:not(:last-of-type)::after {
   content: " ";
   padding: 0 9px;
