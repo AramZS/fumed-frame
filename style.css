@@ -444,7 +444,7 @@ html {
     bottom: 0;
     top: 82%;
     padding-top: 16px;
-    height: 130px;
+    height: clamp(130px, 14vw, 150px);
     left: 0;
     margin-left: -50vw;
     margin-right: -50vw;
@@ -499,7 +499,8 @@ header h1 {
 }
 
 .tagline {
-  font-size: clamp(1.25rem, 3.5vw, 15rem);
+  /*font-size: clamp(1.25rem, 3.5vw, 15rem);*/
+  font-size: clamp(1.25rem, 3.5vw, 3rem);
   margin: 4px 0;
 }
 .sponsor-line {
