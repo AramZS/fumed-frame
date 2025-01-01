@@ -297,7 +297,7 @@ nav h1 {
   position: fixed;
   background-color: transparent;
   height: 80px;
-  z-index: 100;
+  z-index: 90;
   top: 5px;
   left: 0;
   font-variant-caps: small-caps;
@@ -532,7 +532,7 @@ header h1 {
   position: fixed;
   background: transparent;
   border: 0;
-  background: var(--color-text-main);
+  background: var(--main-purple);
   border-radius: 10px;  
   z-index: 100;
 }
@@ -543,5 +543,14 @@ header h1 {
 
 #menu {
   display: none;
-  background-color: var(--color-text-main);  
+  background-color: var(--main-purple);  
+}
+
+#menu.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 100px;
+  z-index: 100;
+  color: var(--light-grey-orange-2);
 }
