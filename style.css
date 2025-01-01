@@ -211,8 +211,9 @@ h6 {
 .main-content {
   grid-area: main-content;
   padding: 10px;
-  margin-top: 80px;
-  max-width: var(--content-size)
+  /*margin-top: 80px;*/
+  max-width: var(--content-max-width);
+  margin-top: 2px;
 }
 
 .halftone-bg {
@@ -438,6 +439,7 @@ html {
 
 body {
   min-height: 100%;
+  margin: 8px auto;
 }
 
 .main-header {
@@ -465,7 +467,13 @@ body {
 }
 
 .main-header header nav ul li {
-  font-size: 18px;
+  font-size: clamp(18px, 3.5vw, 4.5rem);
+}
+
+@media (max-width: 750px) {
+  .main-header header nav ul li {
+    font-size: clamp(20px, 4vw, 5rem);
+  }
 }
 
 .main-content, .tower-left, .tower-right {
