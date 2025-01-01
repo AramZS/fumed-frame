@@ -470,7 +470,8 @@ header h1 {
   background: var(--main-purple);
   color: var(--eggshell);
   /* font-size: 130px; */
-  font-size: 17vh;
+  /* font-size: 17vh; */
+  font-size: clamp(2rem, 19vw, 26rem);
   margin: 0;
 }
 
