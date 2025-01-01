@@ -435,6 +435,7 @@ figure img {
 html {
   background: var(--main-purple);
   height: 100%;
+  min-width: 300px;
 }
 
 body {
@@ -535,4 +536,8 @@ header h1 {
 
 .nav-expander-button svg {
   width: clamp(30px, 8vw, 50px)
+}
+
+#menu {
+  display: none;
 }
