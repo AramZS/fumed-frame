@@ -299,7 +299,7 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
 
 			// update graphic based on step
       console.log('Scroll Handle Section: ', element, direction, index)
-      if (index == 1 && direction == "down"){
+      if (index == 1 && direction == "down" && (window.innerWidth < 562)){
         document.querySelector('#menu').classList.add('active')
       } else {
         document.querySelector('#menu').classList.remove('active')

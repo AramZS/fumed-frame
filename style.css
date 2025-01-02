@@ -614,11 +614,21 @@ header h1 {
   #menu.active {
     width: 50vw;
     height: 256px;
-    height: 16vw;
+    height: fit-content;
   }
+
+  #menu nav ul {
+    margin-top: 10px;
+  }  
   
   #menu nav ul li {
     line-height: 0;
     margin-bottom: 10px;
-  }  
+    padding: 0;
+  }
+  #menu nav li::after {
+    content: "";
+    padding: 0;
+    display: inline-block;
+  }
 }
