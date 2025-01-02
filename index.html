@@ -40,15 +40,46 @@
     -->
     <div class="wrapper">
       <div class="container" role="main">
+        <button type="button" class="nav-expander-button">
+          <span hidden>Search &amp; Section Navigation</span>
+          <svg aria-hidden="true" class="css-1fe7a5q" viewBox="0 0 16 16">
+            <rect x="1" y="3" fill="#f2e1c2" width="14" height="2"></rect>
+            <rect x="1" y="7" fill="#f2e1c2" width="14" height="2"></rect>
+            <rect x="1" y="11" fill="#f2e1c2" width="14" height="2"></rect>
+          </svg>
+        </button>
+        <div id="menu">
+          <nav>
+            <ul>
+              <li>Home</li>
+              <li>Listen</li>
+              <li>Stories</li>
+              <li>About</li>
+            </ul>
+          </nav>
+        </div>
         <div class="tower-left-tip fore-main halftone-bg"></div>
-        <div class="main-header">
+        <div class="main-header active-section">
           <header>
-            <nav>
-              <h1 class="title title-style">FUMED</h1>
-              <br />
-              <a href="">Link 1</a> | <a href="">Link 2</a> |
-              <a href="">Link 3</a>
-            </nav>
+            <div class="header-image">
+              <h1>
+                FUMED
+              </h1>
+              <div class="smokestacks-container">
+                <img class="smokestacks" src="https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/Fumed_Podcast_Site_Smokestacks_Only.png?v=1735253744424" />
+              </div>
+
+              <nav>
+                <h2 class="tagline">
+                   In the shadow of America’s chemical plants and oil refineries 
+                </h2>
+                  <ul>
+                    <li>Listen</li>
+                    <li>About</li>
+                    <li>Credits</li>
+                  </ul>
+              </nav>
+            </div>
           </header>
         </div>
         <div class="tower-right-tip fore-main halftone-bg">
@@ -62,7 +93,7 @@
         </div>
         <div class="main-content">
           <main>
-            <div class="main-body">
+            <div class="main-body active-section">
               <br />
               <section id="intro">
                 <div class="theme-selector">
@@ -209,9 +240,19 @@
     })
     
 figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;    
+    const showMenuBar = function(){
+      var menuEl = document.querySelector('#menu')
+      menuEl.style.transition = "width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
+      menuEl.classList.toggle('active')
+    }
     
 		// initialize the scrollama
 		var scroller = scrollama();
+    var navMenu = document.querySelector("#menu");
+    var navButton = document.querySelector("button.nav-expander-button");
+    navButton.addEventListener("click", () => { 
+      showMenuBar(); 
+    });
 
 		// generic window resize listener event
 		function handleResize() {
@@ -245,6 +286,25 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
       console.log('Scroll Handle: ', element, figure, figureElInner)
 			figureElInner.innerHTML = `<img src="${imgSet[response.index+1]}" />`;
 		}
+    
+    function handleSectionEnter(response) {
+
+      console.log(response);
+			var { element, direction, index } = response;
+
+			// add color to current step only
+			step.classed("is-active", function (d, i) {
+				return i === response.index;
+			});
+
+			// update graphic based on step
+      console.log('Scroll Handle Section: ', element, direction, index)
+      if (index == 1 && direction == "down" && (window.innerWidth < 562)){
+        document.querySelector('#menu').classList.add('active')
+      } else {
+        document.querySelector('#menu').classList.remove('active')
+      }
+		}
 
 
 		function init() {
@@ -262,6 +322,14 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
 					debug: false
 				})
 				.onStepEnter(handleStepEnter);
+      var scrollerTwo = scrollama();
+      scrollerTwo
+				.setup({
+					step: "div.container .active-section",
+					offset: 0,
+					debug: false
+				})
+				.onStepEnter(handleSectionEnter);
 		}
 
 		// kick things off
