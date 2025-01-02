@@ -243,6 +243,7 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
     
 		// initialize the scrollama
 		var scroller = scrollama();
+    var navMenu = document.querySelector("#menu");
 
 		// generic window resize listener event
 		function handleResize() {
@@ -288,8 +289,12 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
 			});
 
 			// update graphic based on step
-      console.log('Scroll Handle: ', element, figure, figureElInner)
-			figureElInner.innerHTML = `<img src="${imgSet[response.index+1]}" />`;
+      console.log('Scroll Handle Section: ', element, direction, index)
+      if (index == 1 && direction == "down"){
+        document.querySelector('#menu').classList.add('active')
+      } else {
+        document.querySelector('#menu').classList.remove('active')
+      }
 		}
 
 
@@ -308,8 +313,8 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
 					debug: false
 				})
 				.onStepEnter(handleStepEnter);
-      
-      scroller
+      var scrollerTwo = scrollama();
+      scrollerTwo
 				.setup({
 					step: "div.container .active-section",
 					offset: 0,
