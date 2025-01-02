@@ -550,6 +550,8 @@ header h1 {
 #menu {
   display: none;
   background-color: var(--main-purple);
+  width: 0;
+  position: fixed;  
 }
 
 #menu.active {
@@ -567,6 +569,9 @@ header h1 {
   padding-right: 50px;
   padding-left: 60px;
   width: 100vw;
+  transition-property: width;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
 #menu nav {
@@ -580,6 +585,12 @@ header h1 {
   height: 100%;
   padding-top: 0;
   padding-bottom: 0;
+}
+
+#menu nav ul {
+    margin: 0;
+    line-height: 60px;
+    font-size: 4vw;
 }
 
 #menu nav li::after {
@@ -596,4 +607,10 @@ header h1 {
     right: 100px;
     width: 100vw;
   }
+  #menu nav ul {
+      margin: 0;
+      line-height: 60px;
+      font-size: 4vw;
+  }
+  
 }
