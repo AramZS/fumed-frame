@@ -240,10 +240,17 @@
     })
     
 figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;    
+    const showMenuBar = function(){
+      document.querySelector('#menu').classList.toggle('active')
+    }
     
 		// initialize the scrollama
 		var scroller = scrollama();
     var navMenu = document.querySelector("#menu");
+    var navButton = document.querySelector("button.nav-expander-button");
+    navButton.addEventListener("click", () => { 
+      showMenuBar(); 
+    });
 
 		// generic window resize listener event
 		function handleResize() {
