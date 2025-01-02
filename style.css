@@ -569,9 +569,9 @@ header h1 {
   padding-right: 50px;
   padding-left: 60px;
   width: 100vw;
-  transition-property: width;
+  /*transition-property: width;
   transition-duration: 1s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);*/
 }
 
 #menu nav {
@@ -607,10 +607,13 @@ header h1 {
     right: 100px;
     width: 100vw;
   }
+  
+}
+
+@media (max-width: 750px) {
   #menu nav ul {
       margin: 0;
       line-height: 60px;
       font-size: 4vw;
   }
-  
 }

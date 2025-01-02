@@ -240,9 +240,9 @@
     })
     
 figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;    
-    const showMenuBar = function(){\
+    const showMenuBar = function(){
       var menuEl = document.querySelector('#menu')
-      menuEl.style.transition = 
+      menuEl.style.transition = "width 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)"
       menuEl.classList.toggle('active')
     }
     
