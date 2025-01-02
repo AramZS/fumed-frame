@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="logo-theme">
+<html lang="en" class="logo-theme logo-bright-inverted-theme">
   <head>
     <!-- 
       This is an HTML comment
@@ -71,7 +71,7 @@
 
               <nav>
                 <h2 class="tagline">
-                   In the shadow of America’s chemical plants and oil refineries 
+                   In the shadow of America’s chemical plants and <span class="avoidwrap">oil refineries</span> 
                 </h2>
                   <ul>
                     <li>Listen</li>
@@ -96,6 +96,12 @@
             <div class="main-body active-section">
               <br />
               <section id="intro">
+                <h3>Listen to Fumed:</h3>
+                <p>
+                  <a href="#">RSS</a> <a href="#">Apple Podcast</a> <a href="#">YouTube</a> <a href="#">Spotify</a>
+                </p>
+                <br />
+                <!--
                 <div class="theme-selector">
                   Themes:
                   <button class="theme-selector-btn" data-theme="logo">
@@ -114,6 +120,7 @@
                     Logo Bright Inverted
                   </button>
                 </div>
+                -->
                 <h2>Using this project</h2>
 
                 <p>This is a brief intro.</p>
@@ -299,7 +306,8 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
 
 			// update graphic based on step
       console.log('Scroll Handle Section: ', element, direction, index)
-      if (index == 1 && direction == "down" && (window.innerWidth < 562)){
+      console.log('Check window size' (window.innerWidth < 562))
+      if (index == 1 && direction == "down" && (window.innerWidth >= 562)){
         document.querySelector('#menu').classList.add('active')
       } else {
         document.querySelector('#menu').classList.remove('active')
