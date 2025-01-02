@@ -59,7 +59,7 @@
           </nav>
         </div>
         <div class="tower-left-tip fore-main halftone-bg"></div>
-        <div class="main-header">
+        <div class="main-header active-section">
           <header>
             <div class="header-image">
               <h1>
@@ -93,7 +93,7 @@
         </div>
         <div class="main-content">
           <main>
-            <div class="main-body">
+            <div class="main-body active-section">
               <br />
               <section id="intro">
                 <div class="theme-selector">
@@ -276,6 +276,21 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
       console.log('Scroll Handle: ', element, figure, figureElInner)
 			figureElInner.innerHTML = `<img src="${imgSet[response.index+1]}" />`;
 		}
+    
+    function handleSectionEnter(response) {
+
+      console.log(response);
+			var { element, direction, index } = response;
+
+			// add color to current step only
+			step.classed("is-active", function (d, i) {
+				return i === response.index;
+			});
+
+			// update graphic based on step
+      console.log('Scroll Handle: ', element, figure, figureElInner)
+			figureElInner.innerHTML = `<img src="${imgSet[response.index+1]}" />`;
+		}
 
 
 		function init() {
@@ -293,6 +308,14 @@ figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;
 					debug: false
 				})
 				.onStepEnter(handleStepEnter);
+      
+      scroller
+				.setup({
+					step: "div.container .active-section",
+					offset: 0,
+					debug: false
+				})
+				.onStepEnter(handleSectionEnter);
 		}
 
 		// kick things off
