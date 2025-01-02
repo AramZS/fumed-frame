@@ -575,6 +575,19 @@ header h1 {
   /* margin-right: 10vw; */
 }
 
+#menu ul li {
+  vertical-align: middle;
+  height: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#menu nav li::after {
+  content: "";
+  padding: 0 9px;
+  display: inline-block;
+}
+
 @media (max-width: 750px) {
   #menu.active {
     display: block;
