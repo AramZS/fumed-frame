@@ -240,8 +240,10 @@
     })
     
 figureElInner.innerHTML = `<img src="${imgSet[0]}" />`;    
-    const showMenuBar = function(){
-      document.querySelector('#menu').classList.toggle('active')
+    const showMenuBar = function(){\
+      var menuEl = document.querySelector('#menu')
+      menuEl.style.transition = 
+      menuEl.classList.toggle('active')
     }
     
 		// initialize the scrollama
