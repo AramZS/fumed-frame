@@ -265,7 +265,7 @@ h6 {
   color: var(--color-text-secondary);
   color: white;
   font-weight: bolder;
-  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/houses.png?v=1725147050740");
+  /*background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/houses.png?v=1725147050740");*/
   background-size: contain;
   background-repeat: repeat-x;
   background-position: bottom;
