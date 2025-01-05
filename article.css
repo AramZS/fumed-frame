@@ -53,3 +53,8 @@ header h1 {
     margin: 10px auto;
     font-size: 2vw;
 }
+
+section#article img {
+  max-width: 100%;
+  margin: 1em auto;
+}
