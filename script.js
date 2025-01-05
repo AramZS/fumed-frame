@@ -27,11 +27,12 @@ function setTheme(themeName) {
 
 // Set theme before page renders
 (function () {
-	setTheme(localStorage.getItem("theme") || "logo");
+	//setTheme(localStorage.getItem("theme") || "logo");
 })();
 
 // When document ready add event listeners
 document.addEventListener("DOMContentLoaded", function () {
+  return
 	const selectTheme = (e) => {
 		const btn = e.currentTarget;
 		if (!btn.dataset.theme) {
