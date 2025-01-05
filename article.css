@@ -13,7 +13,7 @@ header h1 {
   display: block;
   float: right;
   z-index: 99;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -41,6 +41,7 @@ header h1 {
     width: fit-content;
     margin: 1em auto;
     font-size: .8em;
+    margin-top: .8em
 }
 
 .vhs #vhs-header > h2 {
