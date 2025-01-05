@@ -6,3 +6,31 @@ header h1 {
 .header-image nav {
   display: none;
 }
+
+.vhs #vhs-header {
+  position: sticky;
+  display: block;
+  float: right;
+  z-index: 99;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.vhs #vhs-header > * {
+    font-size: 42px;
+    letter-spacing: -1px;
+    line-height: 1.4;
+    background: transparent;
+    color: black;
+    background-color: white;
+    box-shadow: 10px 0 0 #fff, -10px 0 0 #fff;
+    display: inline;
+    -webkit-box-decoration-break: clone;
+    -ms-box-decoration-break: clone;
+    -o-box-decoration-break: clone;
+    box-decoration-break: clone;
+    white-space: pre-wrap;
+    display: inline;
+    position: relative;
+    padding: 0;  
+}
