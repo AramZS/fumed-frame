@@ -45,7 +45,7 @@ header h1 {
 }
 
 .vhs #vhs-header > h2 {
-    font-size: 5vw;
+    font-size: clamp(26px, 5vw, 66px);
 }
 
 .vhs #vhs-header > h3 {

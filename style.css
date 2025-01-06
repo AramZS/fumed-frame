@@ -437,7 +437,7 @@ figure img {
 html {
   background: var(--main-purple);
   height: 100%;
-  min-width: 300px;
+  min-width: 350px;
 }
 
 body {
