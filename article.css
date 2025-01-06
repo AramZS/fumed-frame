@@ -45,7 +45,8 @@ header h1 {
 }
 
 .vhs #vhs-header > h2 {
-    font-size: clamp(26px, 5vw, 66px);
+    font-size: clamp(26px, 4vw, 66px);
+    font-family: "Garnet Capitals", sans-serif;
 }
 
 .vhs #vhs-header > h3 {
