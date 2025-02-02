@@ -247,14 +247,14 @@ h6 {
 }
 
 .tower-right-inner {
-  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-right.png?v=1725147045973");
+  /*background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-right.png?v=1725147045973");*/
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
 .tower-left-inner {
-  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-left.png?v=1725145984861");
+  /*background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/towers-left.png?v=1725145984861");*/
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -265,7 +265,7 @@ h6 {
   color: var(--color-text-secondary);
   color: white;
   font-weight: bolder;
-  background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/houses.png?v=1725147050740");
+  /*background-image: url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/houses.png?v=1725147050740");*/
   background-size: contain;
   background-repeat: repeat-x;
   background-position: bottom;
@@ -437,7 +437,7 @@ figure img {
 html {
   background: var(--main-purple);
   height: 100%;
-  min-width: 300px;
+  min-width: 350px;
 }
 
 body {

@@ -27,11 +27,12 @@ function setTheme(themeName) {
 
 // Set theme before page renders
 (function () {
-	setTheme(localStorage.getItem("theme") || "logo");
+	//setTheme(localStorage.getItem("theme") || "logo");
 })();
 
 // When document ready add event listeners
 document.addEventListener("DOMContentLoaded", function () {
+  return
 	const selectTheme = (e) => {
 		const btn = e.currentTarget;
 		if (!btn.dataset.theme) {
@@ -48,3 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	setTheme(localStorage.getItem("theme") || "logo");
 });
+
+document.querySelector('.footer-full').style.backgroundImage = 'url("https://cdn.glitch.global/f20aef1f-8ae4-469e-a569-dd7a95c2daac/houses.png?v=1725147050740")'
